@@ -25,9 +25,11 @@ watchdog: "http://[HOST]:[PORT:12345]/-/ready"
 options:
   loki_url: "http://localhost:3100/loki/api/v1/push"
   log_level: info
+  disable_reporting: true
 schema:
   loki_url: url
   log_level: "list(debug|info|warn|error)"
+  disable_reporting: bool
   additional_config: "str?"
 stage: experimental
 apparmor: false
